@@ -1,0 +1,688 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>COIS — Dream Achievers</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+    
+        <nav>
+            <div class="nav-brand" onclick="showSection('home')">
+                <img src="cois-removebg-preview.png" alt="COIS">
+             
+            </div>
+            
+            <ul class="nav-links">
+                <li><a onclick="showSection('home')" class="active">Home</a></li>
+                <li><a onclick="showSection('portal')">Portal</a></li>
+                <li><a onclick="showSection('payment')">Payments</a></li>
+                <li><a onclick="showSection('founder')">Founder</a></li>
+                <li><a onclick="showSection('courses')">Programs</a></li>
+                <li><a onclick="showSection('faq')">FAQ</a></li>
+                <li><a class="nav-cta" onclick="showSection('portal')">Student Login</a></li>
+            </ul>
+            
+            <button class="mobile-menu-btn">☰</button>
+        </nav>
+    
+    
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Where Dreams Take <span>Flight</span></h1>
+                    <p>COIS empowers the next generation of leaders, innovators, and dream achievers through world-class education and boundless opportunities.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="showSection('portal')">
+                            Student Portal →
+                        </button>
+                        <button class="btn-secondary" onclick="showSection('courses')">
+                            Explore Programs
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="building.jpg" alt="COIS Dream Achievers" class="hero-logo-large">
+                </div>
+            </div>
+    
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <h3>2,500+</h3>
+                    <p>Students Trained</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Graduation Rate</p>
+                </div>
+                <div class="stat-item">
+                    <h3>20+</h3>
+                    <p>Expert Tutors</p>
+                </div>
+                <div class="stat-item">
+                    <h3>30+</h3>
+                    <p>Programs Offered</p>
+                </div>
+            </div>
+    
+            <div class="features">
+                <div class="section-header">
+                    <h2>Why Choose COIS?</h2>
+                    <p>We combine academic excellence with holistic development to shape future-ready individuals.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" onclick="showSection('courses')">
+                        <div class="feature-icon">🎓</div>
+                        <h3>Academic Excellence</h3>
+                        <p>Rigorous curriculum designed by industry experts, preparing students for top universities and careers worldwide.</p>
+                    </div>
+                    <div class="feature-card" onclick="showSection('founder')">
+                        <div class="feature-icon">🌟</div>
+                        <h3>Dream Achievers</h3>
+                        <p>Every student has unique potential. Our personalized approach unlocks talent and builds lasting confidence.</p>
+                    </div>
+                    <div class="feature-card" onclick="showSection('payment')">
+                        <div class="feature-icon">💳</div>
+                        <h3>Flexible Payments</h3>
+                        <p>Secure, transparent payment systems with multiple options for tuition, materials, and activities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="facility-videos">
+                <div class="section-header">
+                    <h2>Facility Video Tour</h2>
+                    <p>Explore our campus with short videos that showcase the classrooms, labs, and student life at COIS.</p>
+                </div>
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-embed">
+                            <iframe loading="lazy" src="https://www.youtube.com/embed/Ke90Tje7VS0" title="Campus Tour" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <h3>Campus Tour</h3>
+                        <p>A guided walk through our smart classrooms, collaborative spaces, and student facilities.</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-embed">
+                            <iframe loading="lazy" src="https://www.youtube.com/embed/XGSy3_Czz8k" title="Laboratory Tour" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <h3>Laboratory & Innovation Labs</h3>
+                        <p>See the science and technology labs where students build, create, and experiment.</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-embed">
+                            <iframe loading="lazy" src="https://www.youtube.com/embed/3fumBcKC6RE" title="Student Life" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <h3>Student Life</h3>
+                        <p>Experience our student activities, cultural events, and community-driven learning environment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="news-section">
+                <div class="section-header">
+                    <h2>Latest News</h2>
+                    <p>Stay updated with announcements, events, and achievements from COIS.</p>
+                </div>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <h3>Spring Graduation 2026</h3>
+                        <p class="news-meta">May 30, 2026 • Commencement ceremony highlights and award winners.</p>
+                        <p>We celebrated the accomplishments of our graduating class with a ceremony attended by families and dignitaries.</p>
+                        <a class="news-link" onclick="showSection('founder')">Read more →</a>
+                    </article>
+                    <article class="news-card">
+                        <h3>New STEM Lab Inaugurated</h3>
+                        <p class="news-meta">April 12, 2026 • State-of-the-art equipment now available for students.</p>
+                        <p>Our new STEM lab opens opportunities for hands-on learning and research projects.</p>
+                        <a class="news-link" onclick="showSection('courses')">Read more →</a>
+                    </article>
+                    <article class="news-card">
+                        <h3>Scholarship Applications Open</h3>
+                        <p class="news-meta">June 1, 2026 • Limited scholarships available for outstanding students.</p>
+                        <p>Apply now for merit-based scholarships for the upcoming academic year.</p>
+                        <a class="news-link" onclick="showSection('portal')">Apply Now →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="portal" class="section">
+            <div class="portal-section">
+              
+                <div id="portal-login">
+                    <div class="portal-login-container">
+                        <h2>Welcome Back</h2>
+                        <p>Sign in to access your student dashboard</p>
+                        
+                        <div class="portal-tabs">
+                            <div class="portal-tab active" onclick="switchTab(this, 'student')">Student</div>
+                            <div class="portal-tab" onclick="switchTab(this, 'parent')">Parent</div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label>Student ID or Email</label>
+                            <input type="text" id="loginId" placeholder="e.g. STU001">
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" id="loginPass" placeholder="Enter your password">
+                        </div>
+                        
+                        <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="login()">
+                            Sign In
+                        </button>
+                        
+                        <p style="text-align: center; margin-top: 24px; color: var(--gray); font-size: 0.9rem;">
+                            Demo credentials: <strong>STU001</strong> / <strong>demo123</strong>
+                        </p>
+                    </div>
+                </div>
+    
+            
+                <div id="portal-dashboard" class="dashboard hidden">
+                    <div class="dashboard-header">
+                        <div class="dashboard-user">
+                            <div class="user-avatar" id="studentAvatar">JD</div>
+                            <div class="user-info">
+                                <h3 id="studentName">John Doe</h3>
+                                <p>Grade 10 • ID: <span id="studentId">STU001</span></p>
+                            </div>
+                        </div>
+                        <button class="btn-secondary" onclick="logout()">Sign Out</button>
+                    </div>
+    
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <div class="label">Average Score</div>
+                            <div class="value">87%</div>
+                            <div class="trend">↑ 3% from last term</div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="label">Courses</div>
+                            <div class="value">12</div>
+                            <div class="trend">4 active this week</div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="label">Certificates</div>
+                            <div class="value">5</div>
+                            <div class="trend">2 pending approval</div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="label">Attendance</div>
+                            <div class="value">96%</div>
+                            <div class="trend">Excellent standing</div>
+                        </div>
+                    </div>
+    
+                    <div class="dashboard-table-container">
+                        <div class="table-header">
+                            <h3>Current Courses</h3>
+                            <button class="btn-secondary" style="padding: 8px 20px; font-size: 0.85rem;">View All</button>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Course</th>
+                                    <th>Instructor</th>
+                                    <th>Progress</th>
+                                    <th>Grade</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Advanced Mathematics</strong></td>
+                                    <td>Prof. Sarah Chen</td>
+                                    <td>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 78%"></div>
+                                        </div>
+                                        <span style="font-size: 0.8rem; color: var(--gray);">78%</span>
+                                    </td>
+                                    <td><strong style="color: var(--maroon);">A-</strong></td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Physics 101</strong></td>
+                                    <td>Dr. Michael Ross</td>
+                                    <td>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 62%"></div>
+                                        </div>
+                                        <span style="font-size: 0.8rem; color: var(--gray);">62%</span>
+                                    </td>
+                                    <td><strong style="color: var(--maroon);">B+</strong></td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>English Literature</strong></td>
+                                    <td>Mrs. Emily Watson</td>
+                                    <td>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 91%"></div>
+                                        </div>
+                                        <span style="font-size: 0.8rem; color: var(--gray);">91%</span>
+                                    </td>
+                                    <td><strong style="color: var(--maroon);">A</strong></td>
+                                    <td><span class="badge badge-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Computer Science</strong></td>
+                                    <td>Mr. James Liu</td>
+                                    <td>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 45%"></div>
+                                        </div>
+                                        <span style="font-size: 0.8rem; color: var(--gray);">45%</span>
+                                    </td>
+                                    <td><strong style="color: var(--maroon);">B</strong></td>
+                                    <td><span class="badge badge-warning">In Progress</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+    
+                    <div class="dashboard-table-container">
+                        <div class="table-header">
+                            <h3>Upcoming Assignments</h3>
+                            <span style="color: var(--gray); font-size: 0.9rem;">Next 7 days</span>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Assignment</th>
+                                    <th>Course</th>
+                                    <th>Due Date</th>
+                                    <th>Priority</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Problem Set #4</strong></td>
+                                    <td>Advanced Math</td>
+                                    <td>May 20, 2026</td>
+                                    <td><span class="badge badge-warning">High</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Lab Report</strong></td>
+                                    <td>Physics 101</td>
+                                    <td>May 18, 2026</td>
+                                    <td><span class="badge badge-success">Normal</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Essay: Hamlet</strong></td>
+                                    <td>English Lit</td>
+                                    <td>May 25, 2026</td>
+                                    <td><span class="badge badge-success">Normal</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Payment Gateway -->
+        <section id="payment" class="section">
+            <div class="payment-section">
+                <div class="payment-container">
+                    <div class="payment-header">
+                        <img src="/mnt/agents/upload/65814.jpg" alt="COIS">
+                        <h2>Secure Payment</h2>
+                        <p>Complete your transaction safely and instantly</p>
+                    </div>
+    
+                    <div class="form-group">
+                        <label>Payment For</label>
+                        <select id="paymentType" onchange="updateAmount()">
+                            <option value="2500">Tuition Fee — First term</option>
+                            <option value="350">Learning Materials & Books</option>
+                            <option value="150">Examination Fee</option>
+                            <option value="500">Extracurricular Activities</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label>Student ID</label>
+                        <input type="text" value="STU001" placeholder="Enter Student ID">
+                    </div>
+    
+                    <label style="display: block; margin-bottom: 12px; font-weight: 600; color: var(--dark);">Payment Method</label>
+                    <div class="payment-methods">
+                        <div class="payment-method active" onclick="selectMethod(this)">
+                            <div class="icon">💳</div>
+                            <div class="name">Credit Card</div>
+                        </div>
+                        <div class="payment-method" onclick="selectMethod(this)">
+                            <div class="icon">🏦</div>
+                            <div class="name">Bank Transfer</div>
+                        </div>
+                        <div class="payment-method" onclick="selectMethod(this)">
+                            <div class="icon">📱</div>
+                            <div class="name">Mobile Pay</div>
+                        </div>
+                    </div>
+    
+                    <div id="cardFields">
+                        <div class="form-group">
+                            <label>Card Number</label>
+                            <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div class="form-group">
+                                <label>Expiry</label>
+                                <input type="text" placeholder="MM / YY" maxlength="7">
+                            </div>
+                            <div class="form-group">
+                                <label>CVC</label>
+                                <input type="password" placeholder="123" maxlength="4">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Cardholder Name</label>
+                            <input type="text" placeholder="Name as shown on card">
+                        </div>
+                    </div>
+    
+                    <div class="payment-amount">
+                        <span class="total-label">Total Amount</span>
+                        <span class="total-value" id="amountDisplay">$2,500.00</span>
+                    </div>
+    
+                    <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="processPayment()">
+                        Complete Payment Securely
+                    </button>
+    
+                    <div class="secure-badge">
+                        <span>🔒</span>
+                        <span>256-bit SSL Encryption • PCI DSS Compliant</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        
+        <section id="founder" class="section">
+            <div class="founder-section">
+                <div class="founder-grid">
+                    <div class="founder-photo">
+                        <div class="photo-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            <span>Founder's Photo</span>
+                            <span class="sub">Upload image to replace placeholder</span>
+                        </div>
+                    </div>
+                    
+                    <div class="founder-content">
+                        <h2>Mr. Ogundele</h2>
+                        <div class="founder-role">Founder & Chief Executive Officer</div>
+                        
+                        <p class="founder-bio">
+                            With an unwavering belief that education transforms lives, Dr. [Founder Name] established COIS to create an institution where every student is empowered to become a dream achiever. Their vision bridges traditional academic rigor with innovative, future-ready learning methodologies.
+                        </p>
+                        
+                        <p class="founder-bio">
+                            Under their leadership, COIS has grown from a visionary concept into a thriving educational community serving thousands of students. Their hands-on approach and commitment to excellence continue to shape the institution's culture of achievement and integrity.
+                        </p>
+    
+                        <div class="founder-quote">
+                            <p>Education is the passport to the future, for tomorrow belongs to those who prepare for it today. At COIS, we don't just prepare students for exams — we prepare them for life.</p>
+                        </div>
+    
+                        <div class="achievements">
+                            <h4>Recognition & Achievements</h4>
+                            <ul class="achievement-list">
+                                <li>National Education Leadership Award 2025</li>
+                                <li>Published Author — "The Dream Achiever's Mindset"</li>
+                                <li>Ph.D. Educational Leadership, Harvard University</li>
+                                <li>Global Education Ambassador, UNESCO</li>
+                                <li>Keynote Speaker at World Education Summit 2026</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Programs Section -->
+        <section id="courses" class="section">
+            <div class="features" style="padding-top: 80px;">
+                <div class="section-header">
+                    <h2>Our Programs</h2>
+                    <p>Comprehensive educational pathways designed for every aspiration</p>
+                </div>
+                <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔬</div>
+                        <h3>STEM Academy</h3>
+                        <p>Cutting-edge programs in Science, Technology, Engineering, and Mathematics with state-of-the-art laboratories and research opportunities.</p>
+                        <button class="btn-primary" style="margin-top: 20px; padding: 12px 28px; font-size: 0.9rem;" onclick="showSection('payment')">Enroll Now</button>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎭</div>
+                        <h3>Arts & Humanities</h3>
+                        <p>Nurturing creativity through literature, visual arts, performing arts, and cultural studies with world-class faculty.</p>
+                        <button class="btn-primary" style="margin-top: 20px; padding: 12px 28px; font-size: 0.9rem;" onclick="showSection('payment')">Enroll Now</button>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Global Leadership</h3>
+                        <p>Developing tomorrow's leaders through diplomacy, ethics, communication, and international relations programs.</p>
+                        <button class="btn-primary" style="margin-top: 20px; padding: 12px 28px; font-size: 0.9rem;" onclick="showSection('payment')">Enroll Now</button>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💼</div>
+                        <h3>Business & Innovation</h3>
+                        <p>Entrepreneurship, finance, and management programs that connect classroom theory with real-world business challenges.</p>
+                        <button class="btn-primary" style="margin-top: 20px; padding: 12px 28px; font-size: 0.9rem;" onclick="showSection('payment')">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Success Modal -->
+        <div class="modal-overlay" id="successModal">
+            <div class="modal-box">
+                <div class="modal-icon">✓</div>
+                <h3>Payment Successful</h3>
+                <p>Your transaction has been processed securely</p>
+                <div class="transaction-id">COIS-2026-7843291</div>
+                <p style="font-size: 0.9rem;">A receipt has been sent to your registered email address.</p>
+                <button class="btn-primary" style="margin-top: 24px;" onclick="closeModal()">
+                    Continue to Portal
+                </button>
+            </div>
+        </div>
+    
+        <section id="faq" class="section">
+            <div class="features" style="padding-top: 80px;">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Answers to common questions about COIS, enrollment, and payments.</p>
+                </div>
+
+                <div class="faq-list" style="max-width:900px; margin:0 auto; display:grid; gap:12px;">
+                    <details>
+                        <summary>How do I enroll a student?</summary>
+                        <div class="faq-answer"><p>To enroll, choose a program under "Our Programs" and click "Enroll Now". You will be guided to the payment section to complete registration.</p></div>
+                    </details>
+
+                    <details>
+                        <summary>What payment methods are accepted?</summary>
+                        <div class="faq-answer"><p>We accept Credit Card, Bank Transfer, and Mobile Pay. Visit the Payments section for step-by-step instructions.</p></div>
+                    </details>
+
+                    <details>
+                        <summary>Are scholarships or financial aid available?</summary>
+                        <div class="faq-answer"><p>Yes — COIS offers limited scholarships and payment plans. Contact our admissions team via the Contact Us page for eligibility details.</p></div>
+                    </details>
+
+                    <details>
+                        <summary>How long are the programs?</summary>
+                        <div class="faq-answer"><p>Program durations vary by track. Visit each program's page under "Our Programs" for specific duration and curriculum details.</p></div>
+                    </details>
+
+                    <details>
+                        <summary>How can I get further support?</summary>
+                        <div class="faq-answer"><p>For additional help, use the Help Center or Contact Us links in the footer, or email support@cois.example (replace with your real support address).</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="cois-removebg-preview.png" alt="COIS">
+                    <p>Empowering students to achieve their dreams through excellence in education since 2010.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a onclick="showSection('home')">Home</a></li>
+                        <li><a onclick="showSection('portal')">Student Portal</a></li>
+                        <li><a onclick="showSection('payment')">Payments</a></li>
+                        <li><a onclick="showSection('founder')">About Founder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a onclick="showSection('courses')">STEM Academy</a></li>
+                        <li><a onclick="showSection('courses')">Arts & Humanities</a></li>
+                        <li><a onclick="showSection('courses')">Global Leadership</a></li>
+                        <li><a onclick="showSection('courses')">Business</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a onclick="showSection('faq')">FAQ</a></li>
+                        <li><a>Help Center</a></li>
+                        <li><a>Contact Us</a></li>
+                        <li><a>Privacy Policy</a></li>
+                        <li><a>Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 COIS Dream Achievers. All rights reserved.</span>
+                <span>Crafted with excellence in education</span>
+            </div>
+        </footer>
+    
+        <script>
+            // Navigation
+            function showSection(sectionId) {
+                document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+                document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+                
+                document.getElementById(sectionId).classList.add('active');
+                
+                // Update nav active state
+                event?.target?.classList?.add('active');
+                
+                window.scrollTo(0, 0);
+            }
+    
+            // Portal Login
+            function login() {
+                const id = document.getElementById('loginId').value;
+                const pass = document.getElementById('loginPass').value;
+                
+                if (id && pass) {
+                    document.getElementById('portal-login').classList.add('hidden');
+                    document.getElementById('portal-dashboard').classList.remove('hidden');
+                    
+                    // Animate progress bars
+                    setTimeout(() => {
+                        document.querySelectorAll('.progress-fill').forEach(bar => {
+                            bar.style.width = bar.style.width;
+                        });
+                    }, 100);
+                } else {
+                    alert('Please enter both Student ID and Password');
+                }
+            }
+    
+            function logout() {
+                document.getElementById('portal-login').classList.remove('hidden');
+                document.getElementById('portal-dashboard').classList.add('hidden');
+                document.getElementById('loginId').value = '';
+                document.getElementById('loginPass').value = '';
+            }
+    
+            function switchTab(tab, type) {
+                document.querySelectorAll('.portal-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            }
+    
+            // Payment
+            function selectMethod(el) {
+                document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('active'));
+                el.classList.add('active');
+            }
+    
+            function updateAmount() {
+                const amounts = {
+                    '2500': '$2,500.00',
+                    '350': '$350.00',
+                    '150': '$150.00',
+                    '200': '$200.00',
+                    '500': '$500.00'
+                };
+                document.getElementById('amountDisplay').textContent = amounts[document.getElementById('paymentType').value];
+            }
+    
+            function processPayment() {
+                const btn = document.querySelector('.payment-container .btn-primary');
+                btn.innerHTML = 'Processing...';
+                btn.disabled = true;
+                
+                setTimeout(() => {
+                    document.getElementById('successModal').classList.add('active');
+                    btn.innerHTML = 'Complete Payment Securely';
+                    btn.disabled = false;
+                }, 2000);
+            }
+    
+            function closeModal() {
+                document.getElementById('successModal').classList.remove('active');
+                showSection('portal');
+            }
+    
+            // Close modal on backdrop click
+            document.getElementById('successModal').addEventListener('click', function(e) {
+                if (e.target === this) closeModal();
+            });
+    
+            // Animate stats on scroll
+            const observerOptions = {
+                threshold: 0.5
+            };
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeUp 0.8s ease forwards';
+                    }
+                });
+            }, observerOptions);
+    
+            document.querySelectorAll('.stat-item, .feature-card').forEach(el => {
+                observer.observe(el);
+            });
+        </script>
+    </body>
+    </html>
+
+</body>
+</html>
