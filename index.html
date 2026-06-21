@@ -595,23 +595,94 @@
                 window.scrollTo(0, 0);
             }
     
-            // Portal Login
-            function login() {
-                const id = document.getElementById('loginId').value;
-                const pass = document.getElementById('loginPass').value;
-                
-                if (id && pass) {
+            // Portal Login (wired to backend)
+            async function login() {
+                const id = document.getElementById('loginId').value.trim();
+                const pass = document.getElementById('loginPass').value.trim();
+
+                if (!id || !pass) {
+                    alert('Please enter both Student ID and Password');
+                    return;
+                }
+
+                try {
+                    const res = await fetch('/api/login', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ id, password: pass })
+                    });
+
+                    const payload = await res.json();
+                    if (!res.ok) {
+                        alert(payload.error || 'Login failed');
+                        return;
+                    }
+
+                    const student = payload.student;
+
+                    // Populate header
+                    document.getElementById('studentName').textContent = student.name || '';
+                    document.getElementById('studentId').textContent = student.id || '';
+                    document.getElementById('studentAvatar').textContent = student.avatar || (student.name || '').split(' ').map(n=>n[0]).join('').toUpperCase();
+
+                    // Show dashboard
                     document.getElementById('portal-login').classList.add('hidden');
                     document.getElementById('portal-dashboard').classList.remove('hidden');
-                    
-                    // Animate progress bars
-                    setTimeout(() => {
-                        document.querySelectorAll('.progress-fill').forEach(bar => {
-                            bar.style.width = bar.style.width;
-                        });
-                    }, 100);
-                } else {
-                    alert('Please enter both Student ID and Password');
+
+                    // Fetch dashboard data
+                    const dashRes = await fetch(`/api/students/${student.id}/dashboard`);
+                    if (!dashRes.ok) return;
+                    const dash = await dashRes.json();
+
+                    // Update stats cards (assumes order: Average, Courses, Certificates, Attendance)
+                    const vals = document.querySelectorAll('#portal-dashboard .dashboard-card .value');
+                    if (vals.length >= 4 && dash.stats) {
+                        vals[0].textContent = dash.stats.average || '';
+                        vals[1].textContent = dash.stats.courses ?? '';
+                        vals[2].textContent = dash.stats.certificates ?? '';
+                        vals[3].textContent = dash.stats.attendance || '';
+                    }
+
+                    // Populate courses and assignments tables
+                    const tbodies = document.querySelectorAll('#portal-dashboard .dashboard-table-container table tbody');
+                    if (tbodies.length >= 2) {
+                        const coursesTbody = tbodies[0];
+                        coursesTbody.innerHTML = (dash.topCourses || []).map(c => `\
+                            <tr>\
+                                <td><strong>${c.title}</strong></td>\
+                                <td>${c.instructor}</td>\
+                                <td>\
+                                    <div class="progress-bar">\
+                                        <div class="progress-fill" style="width: ${c.progress}%"></div>\
+                                    </div>\
+                                    <span style="font-size: 0.8rem; color: var(--gray);">${c.progress}%</span>\
+                                </td>\
+                                <td><strong style="color: var(--maroon);">${c.grade}</strong></td>\
+                                <td><span class="badge ${c.status === 'Active' ? 'badge-success' : 'badge-warning'}">${c.status}</span></td>\
+                            </tr>`).join('');
+
+                        // animate fills
+                        setTimeout(() => {
+                            coursesTbody.querySelectorAll('.progress-fill').forEach(bar => {
+                                const w = bar.style.width;
+                                bar.style.width = '0%';
+                                requestAnimationFrame(() => bar.style.width = w);
+                            });
+                        }, 60);
+
+                        const assignmentsTbody = tbodies[1];
+                        assignmentsTbody.innerHTML = (dash.upcomingAssignments || []).map(a => `\
+                            <tr>\
+                                <td><strong>${a.title}</strong></td>\
+                                <td>${a.course}</td>\
+                                <td>${a.due}</td>\
+                                <td><span class="badge ${a.priority === 'High' ? 'badge-warning' : 'badge-success'}">${a.priority}</span></td>\
+                            </tr>`).join('');
+                    }
+
+                } catch (err) {
+                    console.error(err);
+                    alert('An error occurred while logging in.');
                 }
             }
     
